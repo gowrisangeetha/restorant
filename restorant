@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Foodie</title>
+    <script>
+        function showHotels() {
+
+            var location = document.getElementById("location").value;
+            if (location !== "") {
+                document.getElementById("hotelSelection").style.display = "block";
+            }
+        }
+
+        function showMenu() {
+            var hotel = document.getElementById("hotel").value;
+            if (hotel !== "") {
+                document.getElementById("menu").style.display = "block";
+                document.getElementById("orderSection").style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <div class="container">
+
+        <header>
+
+            <div class="overlay">
+                <section id="home">
+                    <h1 class="h-primary">Welcome to Foodie</h1>
+                    <br>
+                    <p>Pain and suffering can be endured, never diminished
+                        ."Pain and suffering may be endured, for the sake of others. </p>
+                </section>
+            </div>
+        </header>
+
+        <!-- Location Selection -->
+        <div id="locationSelection">
+            <h2>Select Your Location</h2>
+            <select id="location" onchange="showHotels()">
+                <option value="">Choose Location</option>
+                <option value="Location 1">Erode</option>
+                <option value="Location 2">Tirupur</option>
+                <option value="Location 3">Salem</option>
+            </select>
+        </div>
+
+        <!-- Hotel Selection (Hidden by Default) -->
+        <div id="hotelSelection" style="display:none;">
+            <h2>Select Your Hotel</h2>
+            <select id="hotel" onchange="showMenu()">
+                <option value="">Choose Hotel</option>
+                <option value="Hotel 1">Taj hotel</option>
+                <option value="Hotel 2">Kongu hotel</option>
+                <option value="Hotel 3">Erode mess</option>
+            </select>
+        </div>
+
+        <!-- Menu Section (Hidden by Default) -->
+        <div id="menu" style="display:none;">
+            <div class="heading">
+                <h1>Menu</h1>
+                <h3>Today's Special</h3>
+            </div>
+           
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>Chicken Grill</h5>
+                        <h5 class="price">₹250</h5>
+                    </div>
+                    <p>"Indulge in our mouthwatering Chicken Grill, perfectly seasoned and cooked to juicy perfection—yours today for just ₹250!".</p>
+                    <button>Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1593179241557-bce1eb92e47e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>Juicy Noodles</h5>
+                        <h5 class="price">₹100</h5>
+                    </div>
+                    <p>"Savor the irresistible taste of our Juicy Noodles, packed with flavor and available for just ₹100—order now for a delicious experience!"</p>
+                    <button>Add To Cart</button>
+                </div>
+            </div>
+
+            <!-- Additional Food Items -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1605756584329-592d92a62d91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>Spicy Biryani</h5>
+                        <h5 class="price">₹200</h5>
+                    </div>
+                    <p>"Experience the rich, aromatic flavors of our Spicy Biryani, made with the finest ingredients and bursting with taste—yours for just ₹200!"</p>
+                    <button>Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1541592106381-b31e0a90d434?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>Paneer Tikka</h5>
+                        <h5 class="price">
